@@ -4,7 +4,9 @@
   "description": "Cypress api tests against  https://reqres.in",
   "main": "index.js",
   "scripts": {
-    "localDebug":"node_modules/.bin/cypress open",
+    "localDebug": "node_modules/.bin/cypress open",
+    "cy:run":"cypress run --browser chrome --headless",
+    "cy:parallel:spec": "node_modules/.bin/cypress-parallel -s cy:run -t 2 -d cypress/integration/ -r spec",
     "test": "node cypress/scripts/cypressTestRunner.js --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
   },
   "author": "Sanjeev Kumar",
@@ -12,6 +14,7 @@
   "dependencies": {
     "cypress": "^6.1.0",
     "cypress-multi-reporters": "^1.5.0",
+    "cypress-parallel": "^0.6.0",
     "faker": "^5.5.3",
     "fs-extra": "^10.0.0",
     "mocha": "^9.1.3",
