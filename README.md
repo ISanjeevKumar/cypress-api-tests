@@ -11,6 +11,6 @@ https://reqres.in/
 ```
 ## How to Run Tests
 
-*Clone the Repository
-*Open terminal and type npm install 
-*Use test script, npm run test
+* `Clone the Repository`
+* `Open terminal and type npm install` 
+* `Use test script, npm run test`
