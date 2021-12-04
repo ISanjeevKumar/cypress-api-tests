@@ -1,0 +1,15 @@
+{
+    "reporterEnabled": "mochawesome, mocha-junit-reporter",
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "TestReports/reqress-test-results-[hash].xml",
+      "toConsole": false,
+      "attachments": true
+    },
+    "mochawesomeReporterOptions": {
+        "reportDir": "TestReports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      }
+
+  }
