@@ -29,3 +29,16 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+    - uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: Execution Report
+        path: ${{ github.workspace }}/TestReports
+        
+    - name: Publish Cypress Test Results    
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+      with:
+        files: TestReports/*.xml
+        check_name: Cypress Test Result
