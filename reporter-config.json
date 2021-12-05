@@ -1,5 +1,5 @@
 {
-    "reporterEnabled": "mochawesome, mocha-junit-reporter",
+    "reporterEnabled": "mochawesome, mocha-junit-reporter, cypress-parallel/json-stream.reporter.js, cypress-parallel/simple-spec.reporter.js",
     "mochaJunitReporterReporterOptions": {
       "mochaFile": "TestReports/reqress-test-results-[hash].xml",
       "toConsole": false,
